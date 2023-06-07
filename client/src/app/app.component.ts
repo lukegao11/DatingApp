@@ -11,23 +11,23 @@ import { User } from './_model/user';
 })
 export class AppComponent implements OnInit{
   title = 'Dating App';
-  users:any;
-  constructor(private http:HttpClient, private accountSerivce: AccountService){}
+  //users:any;
+  constructor(/*private http:HttpClient, */private accountSerivce: AccountService){}
   
   ngOnInit(): void {
-    this.getUser();
+    //this.getUser();
     this.setCurrentUser();
   }
 
-  getUser(){
-    this.http.get('https://localhost:5001/api/users').subscribe(
-      {
-        next: response => this.users = response,
-        error: err => console.log(err),
-        complete: () => console.log("request has completed")
-      }
-    )
-  }
+  // getUser(){
+  //   this.http.get('https://localhost:5001/api/users').subscribe(
+  //     {
+  //       next: response => this.users = response,
+  //       error: err => console.log(err),
+  //       complete: () => console.log("request has completed")
+  //     }
+  //   )
+  // }
 
   setCurrentUser(){
     const userString = localStorage.getItem('user');
