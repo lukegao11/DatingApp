@@ -7,8 +7,6 @@ namespace API.Entities
     public class AppUser
     {
         public int Id { get; set; }
-
-        [Required]
         public string UserName { get; set; }
 
         public byte[] PasswordHash { get; set; }
@@ -28,8 +26,8 @@ namespace API.Entities
         public string Country { get; set; }
         public List<Photo> Photos { get; set; } = new();
 
-        public int getAge(DateOnly DateOfBirth){
-            return DateOfBirth.CalculateAge();
-        }
+        // public int GetAge(){
+        //     return DateOfBirth.CalculateAge();
+        // }
     }
 }
