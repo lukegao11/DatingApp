@@ -23,7 +23,7 @@
           <a class="nav-link dropdown-toggle show" data-bs-toggle="dropdown" role="button" dropdownToggle>Welcome {{user.username}}</a>
             
               <div class="dropdown-menu mt-3" *dropdownMenu>
-                <a class="dropdown-item">Edit Profile</a>
+                <a class="dropdown-item" routerLink="/member/edit">Edit Profile</a>
                 <a class="dropdown-item" (click)="logout()">Log Out</a>
               </div>
         </div>

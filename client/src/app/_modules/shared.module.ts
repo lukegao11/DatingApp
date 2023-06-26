@@ -4,6 +4,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ToastrModule } from 'ngx-toastr';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { NgxGalleryAction, NgxGalleryModule } from '@kolkov/ngx-gallery';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 @NgModule({
@@ -15,13 +16,15 @@ import { NgxGalleryAction, NgxGalleryModule } from '@kolkov/ngx-gallery';
     ToastrModule.forRoot({
       positionClass:"toast-top-center"
     }),
-    NgxGalleryModule
+    NgxGalleryModule,
+    NgxSpinnerModule.forRoot({ type: 'ball-8bits' })
   ],
   exports:[
     BsDropdownModule,
     ToastrModule,
     TabsModule,
-    NgxGalleryModule 
+    NgxGalleryModule,
+    NgxSpinnerModule 
   ]
 
 })
